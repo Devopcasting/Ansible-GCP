@@ -7,7 +7,7 @@
     service_account_file: ansible-377413-c1e7422eee58.json
   tasks:
   - name: Create Bucket
-    gcp_storage_bucket:
+    google.cloud.gcp_storage_bucket:
       name: ansible-provisioned-bucket
       project: "{{ project }}"
       auth_kind: "{{ auth_kind }}"
