@@ -6,7 +6,7 @@
     project: ansible-377413
     service_account_file: ansible-377413-c1e7422eee58.json
   tasks:
-  - name: Create Bucket
+  - name: Upload file in the Bucket
     google.cloud.gcp_storage_object:
       project: "{{ project }}"
       auth_kind: "{{ auth_kind }}"
