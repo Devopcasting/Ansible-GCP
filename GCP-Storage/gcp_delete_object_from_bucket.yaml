@@ -1,0 +1,16 @@
+---
+- name: GCP Storage
+  hosts: localhost
+  vars:
+    auth_kind: serviceaccount
+    project: ansible-377413
+    service_account_file: ansible-377413-c1e7422eee58.json
+  tasks:
+  - name: Delete file from Bucket
+    google.cloud.gcp_storage_object:
+      project: "{{ project }}"
+      auth_kind: "{{ auth_kind }}"
+      service_account_file: "{{ service_account_file }}"
+      bucket: ansible-provisioned-bucket
+      action: delete
+      src: Hello.txt
