@@ -1,0 +1,8 @@
+---
+plugin: google.cloud.gcp_compute
+project:
+    - your-gcp-project-id
+auth_kind: serviceaccount
+service_account_file: service-account-json-key-file-path
+groups:
+    dev: "'webserver' in (labels|list)"
